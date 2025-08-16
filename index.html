@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zainab Teah - واجهة متحركة</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+body { font-family: 'Arial', sans-serif; margin:0; padding:0; background:#f5f7fa; color:#333; direction:rtl; overflow-x:hidden; }
+header { background: linear-gradient(135deg,#4a90e2,#50e3c2); color:white; text-align:center; padding:120px 20px; overflow:hidden; }
+header h1 { margin:0; font-size:3em; animation:fadeInDown 1.5s ease forwards; opacity:0; }
+header p { font-size:1.3em; margin-top:15px; animation:fadeInUp 1.5s ease forwards; opacity:0; }
+@keyframes fadeInDown { 0%{opacity:0; transform:translateY(-50px);} 100%{opacity:1; transform:translateY(0);} }
+@keyframes fadeInUp { 0%{opacity:0; transform:translateY(50px);} 100%{opacity:1; transform:translateY(0);} }
+section { padding:60px 20px; max-width:1200px; margin:auto; }
+h2.section-title { text-align:center; margin-bottom:50px; font-size:2em; color:#333; }
+.services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
+.service-card { background:white; padding:30px; border-radius:15px; box-shadow:0 10px 20px rgba(0,0,0,0.1); text-align:center; transition: transform 0.6s ease, box-shadow 0.6s ease; opacity:0; transform:translateY(50px); }
+.service-card:hover { transform:translateY(-15px) scale(1.05); box-shadow:0 15px 25px rgba(0,0,0,0.2); }
+.service-card i { font-size:3em; color:#4a90e2; margin-bottom:15px; }
+.service-card h3 { margin:15px 0; font-size:1.6em; color:#333; }
+.portfolio { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:25px; }
+.portfolio-item { position:relative; overflow:hidden; border-radius:15px; cursor:pointer; box-shadow:0 6px 15px rgba(0,0,0,0.1); transition: transform 0.5s ease, opacity 0.6s ease; opacity:0; transform:translateY(50px); }
+.portfolio-item:hover { transform:scale(1.05); }
+.portfolio-item img { width:100%; display:block; transition: transform 0.5s ease; }
+.portfolio-item:hover img { transform: scale(1.1); }
+.portfolio-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); color:white; display:flex; justify-content:center; align-items:center; opacity:0; transition: opacity 0.3s ease; text-align:center; padding:15px; font-size:1.2em; }
+.portfolio-item:hover .portfolio-overlay { opacity:1; }
+.contact { background: linear-gradient(135deg,#50e3c2,#4a90e2); color:white; text-align:center; padding:60px 20px; border-radius:15px; margin:50px 0; opacity:0; transform:translateY(50px); transition: all 1s ease; }
+.contact a { display:inline-block; margin:15px 10px; padding:15px 30px; color:#4a90e2; background:white; border-radius:50px; text-decoration:none; font-weight:bold; transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease; }
+.contact a:hover { transform:scale(1.1); background:#333; color:white; }
+.contact form { max-width:500px; margin:30px auto; display:flex; flex-direction:column; gap:15px; }
+.contact input, .contact textarea { padding:12px; border-radius:8px; border:1px solid #ccc; font-size:1em; width:100%; }
+.contact button { padding:15px; border:none; border-radius:50px; background:white; color:#4a90e2; font-weight:bold; cursor:pointer; font-size:1em; transition:0.3s; }
+.contact button:hover { transform:scale(1.05); background:#333; color:white; }
+footer { text-align:center; padding:40px 20px; background:#333; color:white; }
+footer a { color:#50e3c2; margin:0 12px; text-decoration:none; transition: color 0.3s ease; }
+footer a:hover { color:#fff; }
+</style>
+</head>
+<body>
+
+<header>
+    <h1 class="animate__animated animate__fadeInDown">Zainab Teah</h1>
+    <p class="animate__animated animate__fadeInUp">تصميم وتطوير صفحات الويب، تطبيقات الجوال، المتاجر الإلكترونية، والخدمات الإبداعية</p>
+</header>
+
+<section>
+    <h2 class="section-title">خدماتنا</h2>
+    <div class="services">
+        <div class="service-card"> <i class="fas fa-globe"></i> <h3>تصميم مواقع الويب</h3> <p>مواقع حديثة وعصرية تتناسب مع هوية مشروعك وتجذب عملاءك.</p> </div>
+        <div class="service-card"> <i class="fas fa-mobile-alt"></i> <h3>تطوير تطبيقات الجوال</h3> <p>تطبيقات ذكية لأجهزة الأندرويد وiOS لتوسيع حضورك الرقمي.</p> </div>
+        <div class="service-card"> <i class="fas fa-store"></i> <h3>إنشاء المتاجر الإلكترونية</h3> <p>متاجر سهلة الاستخدام، آمنة وجاهزة للبيع عبر الإنترنت بسرعة وفعالية.</p> </div>
+        <div class="service-card"> <i class="fas fa-palette"></i> <h3>خدمات التصميم الإبداعي</h3> <p>تصاميم جذابة لشعارات، بطاقات، ومحتوى رقمي يعكس علامتك التجارية.</p> </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">أعمالنا - التطبيقات والبرامج</h2>
+    <div class="portfolio">
+        <div class="portfolio-item"> <img src="https://via.placeholder.com/400x300.png?text=تطبيق+1" alt="تطبيق 1"> <div class="portfolio-overlay">تطبيق جوال مبتكر</div> </div>
+        <div class="portfolio-item"> <img src="https://via.placeholder.com/400x300.png?text=برنامج+2" alt="برنامج 2"> <div class="portfolio-overlay">برنامج لإدارة المشاريع</div> </div>
+        <div class="portfolio-item"> <img src="https://via.placeholder.com/400x300.png?text=تطبيق+3" alt="تطبيق 3"> <div class="portfolio-overlay">تطبيق تواصل اجتماعي</div> </div>
+        <div class="portfolio-item"> <img src="https://via.placeholder.com/400x300.png?text=برنامج+4" alt="برنامج 4"> <div class="portfolio-overlay">برنامج إنتاجية ذكي</div> </div>
+    </div>
+</section>
+
+<section class="contact">
+    <h2>تواصل معنا</h2>
+    <p>احصل على استشارة مجانية وابدأ مشروعك الآن</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="الاسم الكامل" required>
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+        <textarea name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> إرسال الرسالة</button>
+    </form>
+    <div style="margin-top:20px;">
+        <a href="mailto:contact@zainabteah.com"><i class="fas fa-envelope"></i> راسلنا</a>
+        <a href="tel:+9647713003137"><i class="fas fa-phone"></i> اتصل بنا</a>
+        <a href="https://wa.me/9647713003137" target="_blank"><i class="fab fa-whatsapp"></i> واتساب مباشر</a>
+    </div>
+</section>
+
+<footer>
+    <p>تابعنا على وسائل التواصل الاجتماعي</p>
+    <a href="#"><i class="fab fa-facebook"></i> فيسبوك</a>
+    <a href="#"><i class="fab fa-instagram"></i> إنستغرام</a>
+    <a href="#"><i class="fab fa-linkedin"></i> لينكدإن</a>
+    <p>&copy; 2025 Zainab Teah</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+},{threshold:0.2});
+document.querySelectorAll('.service-card, .portfolio-item, .contact').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
